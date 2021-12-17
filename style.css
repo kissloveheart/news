@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* color: #2f9e44; #343a40 */
+}
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%;
+  color: #343a40;
+}
+
+body {
+  background-color: #ebfbee;
+}
+
+header {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLeft {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid #2f9e44;
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 4rem;
+  background-color: #2f9e44;
+  cursor: pointer;
+  margin-right: 5rem;
+  position: relative;
+}
+
+.navRight:active {
+  top: 2px;
+}
+
+.iconSearch {
+  width: 4rem;
+  stroke: white;
+}
+.icon {
+  width: 8rem;
+  height: auto;
+  stroke: #2f9e44;
+}
+
+h3 {
+  color: white;
+  font-size: 2rem;
+}
+.main {
+  max-width: 120rem;
+  margin: 3rem auto;
+  /* border: 1px solid; */
+  font-size: 1.8rem;
+  padding: 0 5rem;
+  /* height: 100vh; */
+  background-color: white;
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: "Russo One", sans-serif;
+  color: black;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+.cover0 {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.cover1 {
+  background-color: #f1f3f5;
+  padding: 2rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  gap: 3rem;
+}
+
+.imageArticle {
+  flex: 0 0 40%;
+}
+.imageSize {
+  max-width: 100%;
+  height: auto;
+}
+.contentText {
+  text-indent: 4rem;
+  line-height: 1.5;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #2f9e44;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #40c057;
+}
+
+p.time {
+  font-style: italic;
+  color: #868e96;
+  margin: 0.5rem 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label {
+  display: block;
+  color: black;
+}
+label.hSearch {
+  font-size: 3.2rem;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #2f9e44;
+}
+
+input[type="text"],
+input[type="date"] {
+  background-color: #f8f9fa;
+  border: 1px solid #adb5bd;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 2rem;
+  font-size: 2.4rem;
+  width: 100%;
+}
+
+.timeDate {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timeDate input {
+  font-size: 2rem;
+  color: #343a40;
+}
+#btnSearchModal {
+  padding: 0.8rem 1.6rem;
+  background-color: #2f9e44;
+  border-radius: 5px;
+  font-size: 2.4rem;
+  border: none;
+  color: white;
+  position: relative;
+  margin-left: 1rem;
+}
+#btnSearchModal:active {
+  top: 2px;
+}
+
+#btnSearchModal:hover {
+  background-color: #40c057;
+}
+
+/* The Modal (background) */
+.modal {
+  position: fixed;
+  display: block;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 12% auto;
+  padding: 0;
+  border: 1px solid #888;
+  max-width: 60rem;
+  box-shadow: 0 4px 8px 0 rgba(65, 46, 46, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+  color: #2f9e44;
+  position: absolute;
+  top: 0rem;
+  right: 1.5rem;
+  font-size: 3.6rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: #40c057;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 2rem 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* loaing */
+.lds-dual-ring {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #2f9e44;
+  border-color: #2f9e44 transparent #2f9e44 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .icon {
+    width: 6rem;
+    height: auto;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .main {
+    margin: 0rem auto;
+    /* border: 1px solid; */
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    /* height: 100vh; */
+    background-color: white;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .modal-body {
+    padding: 1rem 1.5rem;
+  }
+}

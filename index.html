@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRF192x_ASM4</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Top-header -->
+      <header class="">
+        <div class="navLeft">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+            />
+          </svg>
+          <h1>MY NEWS</h1>
+        </div>
+
+        <div class="navRight">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="iconSearch"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <h3>Search</h3>
+        </div>
+      </header>
+      <!-- The Modal -->
+      <div class="modal hidden">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-body">
+            <form>
+              <label for="query" class="hSearch">Search articles</label>
+              <input
+                type="text"
+                id="query"
+                name="search"
+                placeholder=" Keywork"
+              />
+              <label for="time" class="time">Article publish time</label>
+              <div class="timeDate">
+                <div>
+                  <span>From</span>
+                  <input
+                    type="date"
+                    onfocus="this.max=new Date().toISOString().split('T')[0]"
+                    id="from"
+                  />
+                </div>
+                <div>
+                  <span>To</span>
+                  <input
+                    type="date"
+                    onfocus="this.max=new Date().toISOString().split('T')[0]"
+                    id="to"
+                  />
+                </div>
+              </div>
+              <div>
+                <input type="button" id="btnSearchModal" value="Search" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Content of article -->
+      <div class="loading"></div>
+      <article class="topTrend"></article>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>
